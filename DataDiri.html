@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Data Diri</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6ea0d1;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: rgb(238, 234, 234);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px gray;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .description {
+            font-style: italic;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(24, 24, 108);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: rgb(24, 24, 88);
+        }
+        
+        /* Styling untuk pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+            width: 300px;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup button:hover {
+            background-color: navy;
+        }
+    </style>
+    
+    <!-- Eksternal CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Inline CSS -->
+        <h1 style="color: rgb(69, 69, 244);">Biodata Diri</h1>
+        <p>Haii! Nama saya <strong>Billa</strong>. Saya adalah seorang Mahasiswa yang sedang belajar.</p>
+        
+        <div class="image-container">
+            <img src="bilbul.jpg" alt="Foto Profil" width="200" style="border-radius: 10%;">
+            <p class="description">Ini Saya.</p>
+        </div>  
+        
+        <button class="button" onclick="showPopup()">Klik Dong?!</button>
+    </div>
+    
+    <!-- Pop-up Box -->
+    <div id="popup" class="popup">
+        <p>Terima kasih telah mengunjungi halaman saya! Senang anda berkunjung!!!</p>
+        <button onclick="closePopup()">Kembali</button>
+    </div>
+</body>
+</html>
